@@ -1,0 +1,21 @@
+
+<div class="container">
+  <% if is_login? %>
+    <h1><%= @user.name %></h1>
+    <!--<h2>Email: <%= @user.email %></h2>
+    <h2>Facebook UID: <%= @user.uid %></h2>--!>
+    <%=form_tag logout_path, method: "delete" do %>
+    <%= submit_tag "logout" %>
+    <%end%>
+  <% else %>
+      
+    <%= link_to('Sign Up', new_user_path) %> <br>
+      or
+    <%= link_to('Log via with Facebook!', '/auth/facebook') %>
+
+
+  <% end %>
+</div>
+
+
+

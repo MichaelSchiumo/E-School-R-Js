@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Discussion forum:</strong>
+  <%= @comment_feedback.discussion_forum_id %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @comment_feedback.body %>
+</p>
+
+<%= link_to 'Edit', edit_comment_feedback_path(@comment_feedback) %> |
+<%= link_to 'Back', comment_feedbacks_path %>

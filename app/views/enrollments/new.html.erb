@@ -1,0 +1,37 @@
+<!--<form_for action="/enrollments" method="POST">--!>
+<%= form_tag  @enrollment do |f| %>
+    <label for="POST-course">Make Your Choice:</label>
+  <%= collection_select(:course, :course_id, Course.all, :id, :name, prompt: true) %> <br>
+  <% end %>
+
+
+      <!--<label for="POST-course">Make Your Choice:</label>
+        <select id="POST-course" name="course[0][name]">
+          <option value="Fundamental Programming">Fundamental Programming</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Database">Database</option>
+          <option value="AI">AI</option>
+          <option value="Networking">Networking</option>
+          <option value="DataStructure">DataStructure</option>
+          <option value="Operating System">Operating System</option>
+          <option value="Web Programming">Web Programming</option>
+          <option value="Advance Algebra">Advance Algebra</option>
+          </select>--!>
+
+          <!--<select name="enrollment[course_id]" id="post_course_id">
+              <option value="">Select Courses</option>
+              <option value="Fundamental Programming">Fundamental Programming</option>
+              <option value="Psychology">Psychology</option>
+              <option value="Database">Database</option>
+              <option value="AI">AI</option>
+              <option value="Networking">Networking</option>
+              <option value="DataStructure">DataStructure</option>
+              <option value="Operating System">Operating System</option>
+              <option value="Web Programming">Web Programming</option>
+              <option value="Advance Algebra">Advance Algebra</option>
+          </select>--!>
+
+    <button type="submit">Enroll</button>
+</form>
+    
+

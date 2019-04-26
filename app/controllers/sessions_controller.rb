@@ -10,6 +10,8 @@ class SessionsController < ApplicationController
         @user = User.find_or_create_by(uid: auth['uid']) do |u|
           u.name = auth['info']['name']
           u.email = auth['info']['email']
+          u.email = 'noemail' unless auth['info']['email']
+          u.password = SecureRandom.hex
           # u.image = auth['info']['image']
         end
       else
@@ -31,10 +33,11 @@ class SessionsController < ApplicationController
       end
   
       session[:user_id] = @user.id
-      if !@user.enrollment_id
+      # binding.pry
+      if !@user.enrollment
         redirect_to '/enrollments/new'
       else
-        redirect_to "/courses/#{@user.enrollment_id}"
+        redirect_to "/courses/#{@user.enrollment.course.id}"
       end
     end
 

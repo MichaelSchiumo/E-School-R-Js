@@ -1,8 +1,9 @@
 <!--<form_for action="/enrollments" method="POST">--!>
-<%= form_tag  @enrollment do |f| %>
+<%= form_tag  '/enrollments' do |f| %>
     <label for="POST-course">Make Your Choice:</label>
   <%= collection_select(:course, :course_id, Course.all, :id, :name, prompt: true) %> <br>
-  <% end %>
+  <%= submit_tag 'Enroll' %>
+<% end %>
 
 
       <!--<label for="POST-course">Make Your Choice:</label>
@@ -31,7 +32,5 @@
               <option value="Advance Algebra">Advance Algebra</option>
           </select>--!>
 
-    <button type="submit">Enroll</button>
-</form>
     
 

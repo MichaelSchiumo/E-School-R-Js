@@ -47,4 +47,5 @@ group :development, :test do
   gem 'pry'
 end
 
+# gem 'activestorage'#, '~> 0.1'
 # Access an IRB console on exception pages or by using <%= console %> in views

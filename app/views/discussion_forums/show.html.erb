@@ -9,6 +9,24 @@
   <strong>Body:</strong>
   <%= @discussion_forum.body %>
 </p>
+<h2>Comments</h2>
+<% @discussion_forum.comment_feedbacks.each do |comment| %>
+  <%= comment.body %><br>
+<% end %>
+<!-- < % = render partial: 'discussion_forum/comment_feedback', collection: @discussion_forum.comment_feedbacks.reverse % >--!>
+
+<h2>Add a comment:</h2>
+<%= form_for([@discussion_forum_path, @discussion_forum.comment_feedbacks.build]) do |f| %>
+  
+  <input type="hidden" name="discussion_forum_id" value=<%= @discussion_forum.id%> />
+  <p>
+    <%= f.label :Details %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_discussion_forum_path(@discussion_forum) %> |
 <%= link_to 'Back', discussion_forums_path %>

@@ -8,7 +8,7 @@ class DiscussionForumsController < ApplicationController
 
   # GET /discussion_forums/1
   def show
-     @discussion_forum = DiscussionForums.find(params[:id])
+     @discussion_forum = DiscussionForum.find(params[:id])
      @comment_feedback = CommentFeedback.new( :discussion_forum => @discussion_forum )
   end
 

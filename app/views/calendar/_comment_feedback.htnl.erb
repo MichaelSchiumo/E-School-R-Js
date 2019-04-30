@@ -1,0 +1,11 @@
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment_feedback.body %>
+</p>
+ 
+<p>
+  <%= link_to 'Destroy Comment', [comment_feedback.discussion_forum, comment_feedback],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

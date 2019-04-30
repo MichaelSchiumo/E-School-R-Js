@@ -46,6 +46,10 @@ class CoursesController < ApplicationController
     redirect_to courses_url, notice: 'Course was successfully destroyed.'
   end
 
+  def download_pdf
+    send_file "#{Rails.root}/app/assets/docs/reading.txt", type: "application/txt", x_sendfile: true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course

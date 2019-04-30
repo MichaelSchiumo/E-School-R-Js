@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   # get '/student/:id', to: 'students#show', as: 'student'
 
   resources :courses, only: [:show], controller: :courses
-  resources :discussion_forums
-  resources :assignments
+  # resources :discussion_forums
+  # resources :assignments
 
   root 'welcome#home'
   get '/auth/facebook/callback' => 'sessions#create'

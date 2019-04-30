@@ -13,3 +13,41 @@
 <!-- < % = link_to 'Edit', edit_course_path(@course) %> |
 < % = link_to 'Back', courses_path %> --!>
 
+<ul class="list-group">
+    <li class="list-group-item">Class activities</li>
+    <li class="list-group-item">UNIT ONE
+        <ul class="list-group">
+            <li class="list-group-item">Discussion Forum Unit 1   
+              <div class="box pull-right">
+                <button type="submit"class="btn btn-info">
+                 <!-- <a href="/">Discussion Forum</a> --!>
+                 <a> <%= link_to "Add Discussion", new_discussion_forum_path %></a>
+                </button>    
+              </div>
+
+              <!--<div class="right-nav">
+                <ul>
+                  <li><%= link_to "Add Discussion", new_discussion_forum_path %></li>
+                </ul>--!>
+              
+            </li>
+            <li class="list-group-item">Written Assignment Unit 1</li>
+              <div class="box pull-right">
+                <button type="submit"class="btn btn-info">
+                <a> <%= link_to "Add Written", new_assignment_path %></a>
+                </button>    
+              </div>
+        </ul>
+    </li>
+    <li class="list-group-item">UNIT TWO
+        <ul class="list-group">
+            <li class="list-group-item">Discussion Forum Unit 2 </li>
+            <button class="btn"><i class="fa fa-download"></i> Download</button>
+
+            <li class="list-group-item">Written Assignment Unit 2
+            <button class="btn"><i class="fa fa-download"></i> Download</button>
+            </li>
+            
+        </ul>
+    </li>
+</ul>

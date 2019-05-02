@@ -47,9 +47,17 @@ class CoursesController < ApplicationController
   end
 
   def download_pdf
-    send_file "#{Rails.root}/app/assets/docs/reading.txt", type: "application/txt", x_sendfile: true
+    id = params[:id]
+    if id == '1'
+      send_file "#{Rails.root}/app/assets/docs/reading.txt", type: "application/txt", x_sendfile: true
+    else
+      send_file "#{Rails.root}/app/assets/docs/assignment.txt", type: "application/txt", x_sendfile: true
+    end
   end
 
+  # def download_pdf2
+  #   send_file "#{Rails.root}/app/assets/docs/assignment.txt", type: "application/txt", x_sendfile: true
+  # end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course

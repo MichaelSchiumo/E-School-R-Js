@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # get '/student/:id', to: 'students#show', as: 'student'
 
   resources :courses, only: [:show], controller: :courses
-  get 'download_pdf', to: "courses#download_pdf"
+  get '/download_pdf/:id', to: "courses#download_pdf"
   # resources :discussion_forums
   # resources :assignments
 

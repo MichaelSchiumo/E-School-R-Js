@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
+<center>
+  <div>
+    <h1>Discussion Forums</h1>
 
-<h1>Discussion Forums</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <tbody>
+        <% @discussion_forums.each do |discussion_forum| %>
+          <tr>
+            <td><%= discussion_forum.title %></td>
+            <td><%= discussion_forum.body %></td>
+            <td><%= link_to 'Show', discussion_forum %></td>
+            <td><%= link_to 'Edit', edit_discussion_forum_path(discussion_forum) %></td>
+            <td><%= link_to 'Destroy', discussion_forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-  <tbody>
-    <% @discussion_forums.each do |discussion_forum| %>
-      <tr>
-        <td><%= discussion_forum.title %></td>
-        <td><%= discussion_forum.body %></td>
-        <td><%= link_to 'Show', discussion_forum %></td>
-        <td><%= link_to 'Edit', edit_discussion_forum_path(discussion_forum) %></td>
-        <td><%= link_to 'Destroy', discussion_forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <br>
 
-<br>
-
-<%= link_to 'New Discussion Forum', new_discussion_forum_path %>
+    <%= link_to 'New Discussion Forum', new_discussion_forum_path %>
+  </div>
+</center>

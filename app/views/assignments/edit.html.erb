@@ -1,6 +1,11 @@
-<h1>Editing Assignment</h1>
+<center>
+  <div>
+    <h1>Editing Assignment</h1>
+    </div>
+    <%= render 'form', assignment: @assignment %>
 
-<%= render 'form', assignment: @assignment %>
+    <%= link_to 'Show', @assignment %> |
+    <%= link_to 'Back', assignments_path %>
 
-<%= link_to 'Show', @assignment %> |
-<%= link_to 'Back', assignments_path %>
+  
+  </center>

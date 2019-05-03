@@ -15,41 +15,49 @@
 
 <ul class="list-group">
     <li class="list-group-item">Class activities</li>
-    <li class="list-group-item">UNIT ONE
+    <li class="list-group-item">UNIT READING
         <ul class="list-group">
-            <li class="list-group-item">Discussion Forum Unit 1   
-              <div class="box pull-right">
-                <button type="submit"class="btn btn-info">
-                 <!-- <a href="/">Discussion Forum</a> --!>
-                 <a> <%= link_to "Add Discussion", new_discussion_forum_path %></a>
-                </button>    
-              </div>
-
-              <!--<div class="right-nav">
-                <ul>
-                  <li><%= link_to "Add Discussion", new_discussion_forum_path %></li>
-                </ul>--!>
-              
-            </li>
-            <li class="list-group-item">Written Assignment Unit 1</li>
-              <div class="box pull-right">
-                <button type="submit"class="btn btn-info">
-                <a> <%= link_to "Add Written", new_assignment_path %></a>
-                </button>    
-              </div>
-        </ul>
-    </li>
-    <li class="list-group-item">UNIT TWO
-        <ul class="list-group">
-            <li class="list-group-item">Discussion Forum Unit 2 </li>
-            <!--<button class="btn"><i class="fa fa-download"></i> Download</button>--!>
-            <a href="/download_pdf/1" target="_blank" class="btn">Download File</a>
-
-            <li class="list-group-item">Written Assignment Unit 2
-            <!--<button class="btn"><i class="fa fa-download"></i> Download</button>--!>
-            <a href="/download_pdf/2" target="_blank" class="btn">Download File</a>
-            </li>
+            <li class="list-group-item">Discussion Forum Unit Reading
             
+              <div class="text-right">
+                <a href="/download_pdf/1" target="_blank" class="btn btn-success">Download File</a>          
+              </div>
+            </li>
+
+            <li class="list-group-item">Written Assignment Unit One Reading
+            
+              <div class="text-right">
+              <a href="/download_pdf/2" target="_blank"  class="btn btn-success">Download File</a>
+            </li>
+        </ul>
+    
+      <li class="list-group-item">UNIT ONE
+          <ul class="list-group">
+              <li class="list-group-item">Discussion Forum Unit 1   
+                <div class="text-right">
+                 <button type="button"  class="btn btn-success"> <a> <%= link_to "Add Discussion", new_assignment_path %></a> </button>
+                </div>
+
+                <!--<div class="right-nav">
+                  <ul>
+                    <li><%= link_to "Add Discussion", new_discussion_forum_path %></li>
+                  </ul>
+                </div>--!>
+              </li> 
+
+            <li class="list-group-item">Written Assignment Unit 1
+                <!-- <div class="box pull-right">
+                  <button type="submit"class="btn btn-info" style="
+                  margin-left: 250px;">
+                  <a> <%= link_to "Add Written", new_assignment_path %></a>
+                </button>  --!>  
+
+
+                <div class="text-right">
+  	              <button type="button"  class="btn btn-success"><a> <%= link_to "Add Assignment", new_assignment_path %></a></button>
+                </div>
+            </li>
         </ul>
     </li>
+    
 </ul>

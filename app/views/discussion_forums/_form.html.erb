@@ -1,27 +1,32 @@
-<%= form_for(discussion_forum) do |f| %>
-  <% if discussion_forum.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(discussion_forum.errors.count, "error") %> prohibited this discussion_forum from being saved:</h2>
+<center>
+  <div>
+    <%= form_for(discussion_forum) do |f| %>
+      <% if discussion_forum.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(discussion_forum.errors.count, "error") %> prohibited this discussion_forum from being saved:</h2>
 
-      <ul>
-      <% discussion_forum.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% discussion_forum.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title, size: '80x40'%>
+      </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body, size: '80x40' %>
-  </div>
+      <div class="field">
+        <%= f.label :body %>
+        <%= f.text_area :body, size: '80x30' %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+
   </div>
-<% end %>
+</center>

@@ -1,32 +1,36 @@
-<%= form_for(assignment) do |f| %>
-  <% if assignment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+<center>
+  <div>
+    <%= form_for(assignment) do |f| %>
+      <% if assignment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
 
-      <ul>
-      <% assignment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% assignment.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title, size: '80x40', :required => true  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description, size: '80x30', min:5, max: 10, required: true%>
+      </div>
 
-  <div class="field">
-    <%= f.label :submited_date %>
-    <%= f.datetime_select :submited_date %>
-  </div>
+      <!--<div class="field">
+        < % = f.label :submited_date %>
+        < % = f.datetime_select :submited_date %>
+      </div>--!>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</center>

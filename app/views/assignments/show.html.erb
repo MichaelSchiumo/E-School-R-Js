@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<center>
+<div>
 <p>
   <strong>Title:</strong>
   <%= @assignment.title %>
@@ -10,10 +11,13 @@
   <%= @assignment.description %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Submited date:</strong>
-  <%= @assignment.submited_date %>
-</p>
+  < % = @assignment.submited_date % >
+</p>--!>   
 
 <%= link_to 'Edit', edit_assignment_path(@assignment) %> |
 <%= link_to 'Back', assignments_path %>
+
+</center>
+</div>

@@ -1,21 +1,18 @@
 
-<div class="container">
-  <% if is_login? %>
-    <h1><%= @user.name %></h1>
-    <!--<h2>Email: <%= @user.email %></h2>
-    <h2>Facebook UID: <%= @user.uid %></h2>--!>
-    <%=form_tag logout_path, method: "delete" do %>
-    <%= submit_tag "logout" %>
-    <%end%>
-  <% else %>
-      
-    <%= link_to('Sign Up', new_user_path) %> <br>
-      or
-    <%= link_to('Log via with Facebook!', '/auth/facebook') %>
+<center>
+  <div>
+    <h1> 
+      Welcome to E-School
+    
+    </h1>
+    <br>
 
+    <h2>
+      At E-School, we offer the place learn and gain a better learning experience
+    </h2>
+  </div>
+</center>
 
-  <% end %>
-</div>
 
 
 

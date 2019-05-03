@@ -20,7 +20,7 @@
 
       <div class="field">
         <%= f.label :body %>
-        <%= f.text_area :body %>
+        <%= f.text_area :body min:5, max: 10, required: true%>
       </div>
 
       <div class="actions">

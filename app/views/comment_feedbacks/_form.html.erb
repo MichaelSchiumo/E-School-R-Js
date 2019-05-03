@@ -1,27 +1,31 @@
-<%= form_for(comment_feedback) do |f| %>
-  <% if comment_feedback.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment_feedback.errors.count, "error") %> prohibited this comment_feedback from being saved:</h2>
+<center>
+  <div>
+    <%= form_for(comment_feedback) do |f| %>
+      <% if comment_feedback.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(comment_feedback.errors.count, "error") %> prohibited this comment_feedback from being saved:</h2>
 
-      <ul>
-      <% comment_feedback.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% comment_feedback.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :discussion_forum_id %>
-    <%= f.number_field :discussion_forum_id %>
-  </div>
+      <div class="field">
+        <%= f.label :discussion_forum_id %>
+        <%= f.number_field :discussion_forum_id %>
+      </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
+      <div class="field">
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</center>

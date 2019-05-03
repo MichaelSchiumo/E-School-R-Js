@@ -1,9 +1,14 @@
-<!--<form_for action="/enrollments" method="POST">--!>
-<%= form_tag  '/enrollments' do |f| %>
-    <label for="POST-course">Make Your Choice:</label>
-  <%= collection_select(:course, :course_id, Course.all, :id, :name, prompt: true) %> <br>
-  <%= submit_tag 'Enroll' %>
-<% end %>
+<center>
+  <div>
+    <!--<form_for action="/enrollments" method="POST">--!>
+    <%= form_tag  '/enrollments' do |f| %>
+        <label for="POST-course">Make Your Choice:</label>
+      <%= collection_select(:course, :course_id, Course.all, :id, :name, prompt: true) %> <br>
+      <%= submit_tag 'Enroll' %>
+    <% end %>
+  </div>
+</center>
+
 
 
       <!--<label for="POST-course">Make Your Choice:</label>

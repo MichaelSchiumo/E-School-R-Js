@@ -1,6 +1,9 @@
-<h1>Editing Discussion Forum</h1>
+<center>
+    <div>
+        <h1>Editing Discussion Forum</h1>
+    <div>
+    <%= render 'form', discussion_forum: @discussion_forum %>
 
-<%= render 'form', discussion_forum: @discussion_forum %>
-
-<%= link_to 'Show', @discussion_forum %> |
-<%= link_to 'Back', discussion_forums_path %>
+    <%= link_to 'Show', @discussion_forum %> |
+    <%= link_to 'Back', discussion_forums_path %>
+</center>

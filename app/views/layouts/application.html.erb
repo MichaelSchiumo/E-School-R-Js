@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>E-School Rails Portfolio Project</title>
-  <%= csrf_meta_tags %>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <title>E-School Rails Portfolio Project</title>
+    <%= csrf_meta_tags %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag "http://yandex.st/bootstrap/3.0.2/css/bootstrap.min.css", media: "all" %>
-  <%= javascript_include_tag "http://yandex.st/bootstrap/3.0.2/js/bootstrap.min.js" %>
-  <!--<style>
-  .btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "http://yandex.st/bootstrap/3.0.2/css/bootstrap.min.css", media: "all" %>
+    <%= javascript_include_tag "http://yandex.st/bootstrap/3.0.2/js/bootstrap.min.js" %>
+    <!--<style>
+    .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
 
 
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
-}
-</style> --!>
-</head>
-<body>
-    
-  <div class="container">  
-  <div class="container">
-  <% if is_login? %>
-    <h1><%= current_user.name %></h1>
-    <!--<h2>Email: <%= current_user.email %></h2>
-    <h2>Facebook UID: <%= current_user.uid %></h2>--!>
-    <%=form_tag logout_path, method: "delete" do %>
-    <%= submit_tag "logout" %>
-    <%end%>
-  <% else %>
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+  </style> --!>  
+  </head>
+  <body>
+
+    <center>
+      <div class="container">  
       
-    <%= link_to('Sign Up', new_user_path) %> <br>
-      or
-    <%= link_to('Log via with Facebook!', '/auth/facebook') %>
+      <% if is_login? %>
+        <h1><%= current_user.name %></h1>
+        <!--<h2>Email: <%= current_user.email %></h2>
+        <h2>Facebook UID: <%= current_user.uid %></h2>--!>
+        <%=form_tag logout_path, method: "delete" do %>
+        <%= submit_tag "logout" %>
+        <%end%>
+      <% else %>
+          
+        <%= link_to('Sign Up', new_user_path) %> <br>
+          or
+        <%= link_to('Log via with Facebook!', '/auth/facebook') %>
 
 
-  <% end %>
-</div>
+      <% end %>
+    </div>
 
-  <%= yield %>
-  </div>
+    <%= yield %>
+      </div>
+    </center>
 
-</body>
+  </body>
 </html>

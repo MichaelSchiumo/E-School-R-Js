@@ -1,5 +1,8 @@
-<h1>New Comment Feedback</h1>
+<center>
+    <div>
+        <h1>New Comment Feedback</h1>
+    </div>
+    <%= render 'form', comment_feedback: @comment_feedback %>
 
-<%= render 'form', comment_feedback: @comment_feedback %>
-
-<%= link_to 'Back', comment_feedbacks_path %>
+    <%= link_to 'Back', comment_feedbacks_path %>
+</center>

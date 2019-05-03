@@ -1,33 +1,38 @@
-<p id="notice"><%= notice %></p>
+<center>
+  <div>
 
-<! <h1>Course Name:  < % = @user.courses[0].name%></h1> --!> 
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <!-- <th>Grade</th> --!>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <! <h1>Course Name:  < % = @user.courses[0].name%></h1> --!> 
 
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.name %></td>
-        <!-- <td>< % = course.grade %></td> --!>
-        <!-- <td>< % = link_to 'Show', course %></td> --!>
-        <!-- <td>< % = link_to 'Edit', edit_course_path(course) %></td> --!>
-        <!-- <td>< % = link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <!-- <th>Grade</th> --!>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  
-</table>
+      <tbody>
+        <% @courses.each do |course| %>
+          <tr>
+            <td><%= course.name %></td>
+            <!-- <td>< % = course.grade %></td> --!>
+            <!-- <td>< % = link_to 'Show', course %></td> --!>
+            <!-- <td>< % = link_to 'Edit', edit_course_path(course) %></td> --!>
+            <!-- <td>< % = link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
 
-<br>
+      
+    </table>
 
-<!-- < % = link_to 'New Course', new_course_path %>--!>
+    <br>
+
+    <!-- < % = link_to 'New Course', new_course_path %>--!>
+  </div>
+</center>
 
 

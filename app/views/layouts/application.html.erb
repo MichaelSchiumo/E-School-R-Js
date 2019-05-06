@@ -3,13 +3,14 @@
   <head>
     <title>E-School Rails Portfolio Project</title>
     <%= csrf_meta_tags %>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <!--link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= stylesheet_link_tag "http://yandex.st/bootstrap/3.0.2/css/bootstrap.min.css", media: "all" %>
-    <%= javascript_include_tag "http://yandex.st/bootstrap/3.0.2/js/bootstrap.min.js" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     <!--<style>
     .btn {
     background-color: DodgerBlue;
@@ -18,6 +19,7 @@
     padding: 12px 30px;
     cursor: pointer;
     font-size: 20px;
+    
   }
 
 
@@ -26,6 +28,7 @@
     background-color: RoyalBlue;
   }
   </style> --!>  
+  
   </head>
   <body>
 
@@ -48,7 +51,7 @@
 
       <% end %>
     </div>
-
+    <div class="topcorner" id="time"></div>
     <%= yield %>
       </div>
     </center>

@@ -4,8 +4,14 @@ Rails.application.routes.draw do
   resources :enrollments, only:[ :new, :create, :show]
   resources :comment_feedbacks
   resources :discussion_forums
-  resources :assignments
+  
+  namespace :api do 
+    
+    resources :assignments
+
+  end 
   get '/calendar/show'
+  
   # get 'posts/:id', to: 'posts#show'
   # resources :posts, only: [:index, :new,:show]
   # resources :students, only: [:index, :new, :create]

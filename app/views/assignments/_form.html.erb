@@ -1,5 +1,4 @@
-<center>
-  <div>
+
     <%= form_for(assignment) do |f| %>
       <% if assignment.errors.any? %>
         <div id="error_explanation">
@@ -12,7 +11,9 @@
           </ul>
         </div>
       <% end %>
-
+      <!--input id="user_id" name="user_id" type="hidden"--!>
+      <%= f.hidden_field :user_id%>
+      <%= f.hidden_field :course_id%>
       <div class="field">
         <%= f.label :title %>
         <%= f.text_field :title, size: '80x40', :required => true  %>
@@ -23,14 +24,8 @@
         <%= f.text_area :description, size: '80x30', min:5, max: 10, required: true%>
       </div>
 
-      <!--<div class="field">
-        < % = f.label :submited_date %>
-        < % = f.datetime_select :submited_date %>
-      </div>--!>
-
       <div class="actions">
         <%= f.submit %>
       </div>
     <% end %>
-  </div>
-</center>
+  

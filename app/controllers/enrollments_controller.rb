@@ -10,7 +10,7 @@ class EnrollmentsController < ApplicationController
     if logged_in?
     # @enrollment = Enrollment.new(params['course']['course_id]'])
       @enrollment = Enrollment.new(user_id: @current_user.id, course_id: params['course']['course_id'])
-      binding.pry
+      #binding.pry
       if @enrollment.save
         redirect_to "/courses/#{@enrollment.course.id}"
       else

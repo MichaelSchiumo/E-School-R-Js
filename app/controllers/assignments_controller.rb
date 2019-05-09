@@ -14,7 +14,7 @@ class AssignmentsController < ApplicationController
 
   # GET /assignments/new
   def new
-    @assignment = Assignment.new
+    @assignment = Assignment.new(user_id:current_user.id, course_id: current_user.courses[0].id)
   end
 
   # GET /assignments/1/edit
@@ -55,6 +55,6 @@ class AssignmentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def assignment_params
-      params.require(:assignment).permit(:title, :description)
+      params.require(:assignment).permit(:title, :description, :user_id, :course_id)
     end
 end

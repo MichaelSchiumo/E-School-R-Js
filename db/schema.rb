@@ -15,23 +15,18 @@ ActiveRecord::Schema.define(version: 20190415203117) do
   create_table "assignments", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "submited_date"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "comment_feedbacks", force: :cascade do |t|
     t.integer  "discussion_forum_id"
     t.text     "body"
+    t.integer  "user_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.integer  "assignment_id"
-    t.text     "body"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
   end
 
   create_table "courses", force: :cascade do |t|
@@ -44,6 +39,8 @@ ActiveRecord::Schema.define(version: 20190415203117) do
   create_table "discussion_forums", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
+    t.integer  "course_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

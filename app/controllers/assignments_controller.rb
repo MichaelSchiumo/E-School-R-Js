@@ -1,4 +1,4 @@
-class Api::AssignmentsController < ApplicationController
+class AssignmentsController < ApplicationController
   before_action :set_assignment, only: [:show, :edit, :update, :destroy]
 
   # GET /assignments
@@ -8,6 +8,8 @@ class Api::AssignmentsController < ApplicationController
 
   # GET /assignments/1
   def show
+    @assignment = Assignment.find(params[:id])
+    render json: @assignment
   end
 
   # GET /assignments/new

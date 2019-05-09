@@ -50,3 +50,4 @@ end
 
 # gem 'activestorage'#, '~> 0.1'
 # Access an IRB console on exception pages or by using <%= console %> in views
+gem 'active_model_serializers'

@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :courses, only: [:show], controller: :courses
   get '/download_pdf/:id', to: "courses#download_pdf"
   # resources :discussion_forums
-  # resources :assignments
+  resources :assignments
 
   root 'welcome#home'
   get '/auth/facebook/callback' => 'sessions#create'

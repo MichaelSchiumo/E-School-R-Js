@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require hours
-//= require_tree .
+//= require assignments

@@ -5,7 +5,7 @@
 
     <h1>Assignments</h1>
 
-    <table>
+    <table >
       <thead>
         <tr>
           <th>Title</th>
@@ -18,10 +18,11 @@
       <tbody>
         <% @assignments.each do |assignment| %>
           <tr>
-            <td><%= assignment.title %></td>
+            <td><%= assignment.title %></td> 
             <td><%= assignment.description %></td>
-            <!-- <td><%= assignment.submited_date %></td> --!>
+
             <td><%= link_to 'Show', assignment %></td>
+            
             <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
             <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>

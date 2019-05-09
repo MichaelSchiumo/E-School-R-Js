@@ -17,7 +17,7 @@ class EnrollmentsController < ApplicationController
         redirect_to '/enrollments/new'
       end
     else
-      binding.pry
+     # binding.pry
       redirect_to '/enrollments/new'
     end
   end 

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       # If user saves in the db successfully:
       flash[:notice] = "Account created successfully!"
       session[:user_id] = @user.id
-      redirect_to '/enrollments/show'
+      redirect_to '/enrollments/new'
     else
       # If user fails model validation - probably a bad password or duplicate email:
       flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."

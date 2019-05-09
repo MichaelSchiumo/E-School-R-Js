@@ -1,58 +1,28 @@
 
 <center id="show">
-  <div>
-    <p id="notice"><%= notice %></p>
-    <p>
-      <strong>Title:</strong>
-      <%= @assignment.title %>
-    </p>
-
-    <p>
-      <strong>Description:</strong>
-      <%= @assignment.description %>
-    </p>
-
-    <!-- <p>
-      <strong>Submited date:</strong>
-      < % = @assignment.submited_date % >
-    </p>--!>   
-
-    <%= link_to 'Edit', edit_assignment_path(@assignment) %> |
-    <%= link_to 'Back', assignments_path %>
-
-
-  </div>
+ 
 </center>
 
-class Assignment {
-  constructor(id,title, description) {
-    this.id = id
-    this.title = title;
-    this.description = description;
-  }
 
-  showAssignment(){
-    return(
-      
-        <div>
-          <p id="notice"><%= notice %></p>
-          <p>
-            <strong>Title:</strong>
-            <%= this.title %>
-          </p>
 
-          <p>
-            <strong>Description:</strong>
-            <%= this.description %>
-          </p>
-          <a href="" > Edit</a>
-          <a href="" > Back</a>
-          
-        </div>
-    )
-  }
 
-}
 
-as = new Assignment(data)
-as.showAssignment()
+<div id="assignmentResult">
+  <h2 id="assignmentTitle"></h2>
+  <p id="assignmentBody"></p>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+
+fetch('../api/assignments/<%= @assignment.id %>' )
+.then(res => res.json())
+.then(data => {
+  console.log(data)
+  as = new Assignment(data)
+        
+  var post = data;
+  $("#show").html(as.showAssignment());
+})
+
+
+</script>

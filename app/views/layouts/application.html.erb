@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>E-School Rails Portfolio Project</title>
+    <title>E-School Rails and Javascript Portfolio Project</title>
     <%= csrf_meta_tags %>
     <!--link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,11 +32,12 @@
   </head>
   <body>
 
+  
     <center>
       <div class="container">  
       
       <% if is_login? %>
-        <h1><%= current_user.name %></h1>
+        <h1> You are login as being <%= current_user.name %> !</h1>
         <!--<h2>Email: <%= current_user.email %></h2>
         <h2>Facebook UID: <%= current_user.uid %></h2>--!>
         <%=form_tag logout_path, method: "delete" do %>

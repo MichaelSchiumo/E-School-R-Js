@@ -11,11 +11,6 @@ Rails.application.routes.draw do
 
   end 
   get '/calendar/show'
-  
-  # get 'posts/:id', to: 'posts#show'
-  # resources :posts, only: [:index, :new,:show]
-  # resources :students, only: [:index, :new, :create]
-  # get '/student/:id', to: 'students#show', as: 'student'
 
   resources :courses, only: [:show], controller: :courses
   get '/download_pdf/:id', to: "courses#download_pdf"
@@ -23,6 +18,11 @@ Rails.application.routes.draw do
   resources :assignments
 
   root 'welcome#home'
+
+  get '/login'     => 'sessions#new'
+   
+  # create (post) action for when log in form is submitted:
+  post '/login'    => 'sessions#create'
   get '/auth/facebook/callback' => 'sessions#create'
  # sign up page with form:
  get '/signup' => 'users#new', as: :new_user
@@ -30,14 +30,9 @@ Rails.application.routes.draw do
  # create (post) action for when sign up form is submitted:
  post '/users' => 'users#create'
 
- # log in page with form:
- get '/login'     => 'sessions#new'
-   
- # create (post) action for when log in form is submitted:
- post '/login'    => 'sessions#create'
-
  # delete action to log out:
- delete '/logout' => 'sessions#destroy'  
+ delete '/logout' => 'sessions#destroy'
+ get '/logout' => 'sessions#destroy' 
  # delete 'sign_out', to: 'sessions#destroy', as: 'sign_out'
   # get 'enrollment/page'
 

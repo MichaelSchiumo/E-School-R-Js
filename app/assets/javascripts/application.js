@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require hours
 //= require assignments
+//= require comment_feedback

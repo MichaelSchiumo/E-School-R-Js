@@ -45,11 +45,7 @@
         <%end%>
       <% else %>
           
-        <%= link_to('Sign Up', new_user_path) %> <br>
-          or
-        <%= link_to('Log via with Facebook!', '/auth/facebook') %>
-
-
+      <%= link_to('Sign Up', new_user_path) %> | <%= link_to('Log In', login_path) %> | or <%= link_to('Log In with Facebook!', '/auth/facebook') %>
       <% end %>
     </div>
     <div class="topcorner" id="time"></div>
